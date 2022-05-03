@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>algorithm</title>
+</head>
+<body>
+  <button id="A">A</button>
+
+  <script>
+    const practics = ["피카츄", "라이츄", "파이리", "꼬부기", "버터풀", "야도란", "피죤투", "또가스"];
+    const btnA = document.querySelector('button');
+
+    let count = 0;
+
+    btnA.addEventListener('click',function(){
+      let h1 = document.createElement('h1');
+      document.body.appendChild(h1);
+
+      h1.textContent = `${practics[count]}`;
+      // console.log(count);
+      count++;
+      if(count > practics.length){
+        h1.textContent = '포켓몬스터를 다모았다';
+      }
+    })
+  </script>
+</body>
+</html>

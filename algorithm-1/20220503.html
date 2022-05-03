@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>algorithm</title>
+</head>
+<body>
+  <button>click 👍</button>
+
+  <script>
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+
+    const btn = document.querySelector('button');
+    btn.addEventListener('click',event =>{
+      document.body.style.backgroundColor = `rgb(${Math.random() *255},${Math.random() *255},${Math.random() *255})`;
+      // console.log('?');
+    })
+  </script>
+</body>
+</html>

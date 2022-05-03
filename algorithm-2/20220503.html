@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>algorithm</title>
+</head>
+<body>
+  <button id="btn-a">A</button>
+  <button id="btn-b">B</button>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius eaque quisquam iusto veritatis explicabo suscipit, nesciunt illum beatae praesentium officiis, vitae sint! Eum, exercitationem fugiat? Minus sequi esse voluptate sint obcaecati quo non reiciendis aspernatur blanditiis, accusamus error dolore similique maxime deserunt beatae mollitia odit laboriosam porro cupiditate quas autem sapiente veniam! Voluptas dolorem minus obcaecati esse eaque non quia facilis maiores beatae aspernatur a quaerat quasi architecto odio quis, libero rem rerum! Fuga, non at et delectus iure voluptates, enim obcaecati veniam magnam soluta recusandae vel exercitationem quisquam quo nostrum omnis aut. Possimus voluptatem aliquid at totam provident dolorum?</p>
+
+  <script>
+    const btnA = document.getElementById('btn-a');
+    const btnB = document.getElementById('btn-b');
+
+    document.body.style.backgroundColor = '#fff';
+    document.body.style.color = '#000';
+
+    btnA.addEventListener('mousedown', function(){
+      document.body.style.backgroundColor = '#fff';
+      document.body.style.color = '#333';
+    })
+    btnA.addEventListener('mouseup', function(){
+      document.body.style.backgroundColor = '#333';
+      document.body.style.color = '#ccc';
+    })
+    btnB.addEventListener('mousedown', function(){
+      document.body.style.backgroundColor = '#fff';
+      document.body.style.color = '#333';
+    })
+    btnB.addEventListener('mouseup', function(){
+      document.body.style.backgroundColor = '#ccc';
+      document.body.style.color = '#333';
+    })
+  </script>
+</body>
+</html>
