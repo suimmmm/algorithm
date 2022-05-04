@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>algorithm</title>
+</head>
+<body>
+  <h1>따르릉</h1>
+  <button id="btn-a">A</button>
+  <button id="btn-b">B</button>
+
+  <script>
+    const alram = document.querySelector('h1');
+    const btnA = document.getElementById('btn-a');
+    const btnB = document.getElementById('btn-b');
+    let isState = true;
+    let a = '똑';
+    let b = '딱';
+    let count = 0;
+    
+    btnA.addEventListener('click', function(){
+      const timeStart = setInterval(function(){
+        if(isState === true){
+          isState = false;
+          alram.textContent = a;
+        }else{
+          alram.textContent = b;
+          isState = true;
+          alram.style.margin = count + 'px';
+        }
+        count ++ ;
+      },500);  
+
+      btnB.addEventListener('click',function(){
+        clearInterval(timeStart);
+      } );
+    });
+  </script>
+</body>
+</html>
