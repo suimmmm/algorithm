@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>algorithm</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    ul, li{list-style: none; text-decoration: none;}
+    ul{
+      margin: 10px;
+      background-color: #ccc;
+      width: 400px;
+      height: 50px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    ul > li{
+      padding: 10px 20px;
+      border: 1px solid;
+    }
+  </style>
+</head>
+<body>
+  <ul id="root">
+    <li data-item="1">menu-1</li>
+    <li data-item="2">menu-2</li>
+    <li data-item="3">menu-3</li>
+    <li data-item="4">menu-4</li>
+  </ul>
+
+  <script>
+    const liItem = document.querySelectorAll('li');
+
+    liItem[0].addEventListener('click', ()=>{
+      for(let i = 0; i < liItem.length; i++){
+        liItem[i].style.display = 'block';
+        if(liItem[i].dataset.item === '1'){
+          liItem[i].style.color = 'red';
+        }
+        else{
+          liItem[i].style.display = 'none';
+        }
+      }
+    })
+  </script>
+</body>
+</html>
